@@ -1,0 +1,76 @@
+name: Deploy food map
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Validate static payload
+        run: |
+          node --input-type=module <<'NODE'
+          import { readdirSync, readFileSync, statSync } from 'node:fs';
+          import assert from 'node:assert/strict';
+          const walk = (dir) => readdirSync(dir).flatMap(name => {
+            const path = dir + name;
+            return statSync(path).isDirectory() ? walk(path + '/') : [path];
+          });
+          for (const file of ['index.html', '.nojekyll', 'data/restaurants.csv', 'THIRD_PARTY_NOTICES.txt']) readFileSync(file);
+          const js = walk('assets/').filter(p => p.endsWith('.js')).map(p => readFileSync(p, 'utf8')).join('');
+          for (const name of ['JS_KEY', 'MAP_ID', 'EMBED_KEY']) assert.ok(js.includes(`FOOD_MAP_PUBLIC_${name}_PLACEHOLDER`));
+          assert.ok(!/(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_|AIza[0-9A-Za-z_-]{30,})/.test(js));
+          NODE
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Prepare site with browser configuration
+        env:
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+          GOOGLE_MAPS_MAP_ID: ${{ secrets.GOOGLE_MAPS_MAP_ID }}
+          GOOGLE_MAPS_EMBED_API_KEY: ${{ secrets.GOOGLE_MAPS_EMBED_API_KEY }}
+        run: |
+          node --input-type=module <<'NODE'
+          import { cpSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+          const values = {
+            JS_KEY: process.env.GOOGLE_MAPS_API_KEY || '',
+            MAP_ID: process.env.GOOGLE_MAPS_MAP_ID || '',
+            EMBED_KEY: process.env.GOOGLE_MAPS_EMBED_API_KEY || '',
+          };
+          if (!values.JS_KEY || !values.MAP_ID) throw new Error('Configure GOOGLE_MAPS_API_KEY and GOOGLE_MAPS_MAP_ID secrets.');
+          for (const value of Object.values(values)) if (!/^[A-Za-z0-9_-]*$/.test(value)) throw new Error('Invalid Maps configuration.');
+          mkdirSync('_site');
+          for (const path of ['index.html', '.nojekyll', 'THIRD_PARTY_NOTICES.txt', 'assets', 'brand', 'data']) cpSync(path, '_site/' + path, { recursive: true });
+          for (const file of readdirSync('_site/assets').filter(p => p.endsWith('.js'))) {
+            const path = '_site/assets/' + file;
+            let text = readFileSync(path, 'utf8');
+            for (const [name, value] of Object.entries(values)) text = text.replaceAll(`FOOD_MAP_PUBLIC_${name}_PLACEHOLDER`, value);
+            writeFileSync(path, text);
+          }
+          NODE
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
+        with:
+          path: _site
+      - uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+        id: deployment
