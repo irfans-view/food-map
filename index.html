@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="theme-color" content="#f6f3eb" />
+    <meta
+      name="description"
+      content="Discover five restaurant stories from Irfan's View in a private food-map concept."
+    />
+    <title>Irfan’s food trail — a little hungry, a little curious</title>
+    <script type="module" crossorigin src="./assets/index-vWSqFE6E.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BzvxkS_5.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#explore">Skip to restaurants</a>
+    <header class="site-header shell">
+      <a class="wordmark" href="#home" aria-label="Irfan’s food trail home"
+        ><span class="brand-icon" aria-hidden="true">i.</span> irfan’s<span
+          class="wordmark-sub"
+          >FOOD TRAIL</span
+        ></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#explore">The food map</a><a href="#about">The story</a
+        ><a
+          class="channel-link"
+          href="https://www.youtube.com/@irfansview1"
+          target="_blank"
+          rel="noopener noreferrer"
+          >YouTube ↗</a
+        >
+      </nav>
+    </header>
+    <main id="home">
+      <section class="hero shell" aria-labelledby="welcome">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="live-dot"></span> GOOD FOOD. GREAT STORIES.
+          </p>
+          <h1 id="welcome">Big appetite.<br />Local <em>discoveries.</em></h1>
+          <p class="hero-description">
+            Welcome to Irfan’s food trail. From that first bite to your next
+            favourite spot — discover the places behind the stories.
+          </p>
+          <a class="button primary" href="#explore"
+            >Find your next bite <span aria-hidden="true">↗</span></a
+          >
+          <div class="hero-note">
+            <span class="mini-compass" aria-hidden="true">✳</span
+            ><span
+              >A taste of Chennai.<br /><strong
+                >A whole lot to explore.</strong
+              ></span
+            >
+          </div>
+        </div>
+        <figure class="portrait-stage">
+          <img
+            class="irfan-portrait"
+            src="./brand/irfans-view-channel.jpg"
+            alt="Irfan from his official YouTube channel portrait"
+            width="900"
+            height="900"
+            fetchpriority="high"
+          />
+          <figcaption>IRFAN’S VIEW / THE PERSON BEHIND THE BITES</figcaption>
+          <span class="portrait-sticker" aria-hidden="true"
+            >Good food.<br />Great detours.</span
+          >
+        </figure>
+      </section>
+      <div class="trail-strip" aria-hidden="true">
+        <div class="shell">
+          <span>WATCH THE STORY</span><b>✳</b><span>FIND THE PLACE</span
+          ><b>✳</b><span>MAKE IT YOUR NEXT STOP</span><b>✳</b
+          ><span>COME HUNGRY</span>
+        </div>
+      </div>
+      <section
+        id="explore"
+        class="explore shell"
+        aria-labelledby="explore-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE FOOD MAP / CHENNAI EDITION</p>
+            <h2 id="explore-title">EXPLORE THE<br /><em>NEIGHBOURHOOD.</em></h2>
+          </div>
+          <p>
+            Five stories to start with.<br />Pick a place. Press play. Head out.
+          </p>
+        </div>
+        <div class="explorer-toolbar">
+          <label class="search-box"
+            ><span aria-hidden="true">⌕</span
+            ><span class="sr-only">Search restaurants, areas or cuisines</span
+            ><input
+              id="search"
+              type="search"
+              placeholder="Try Anna Nagar, biryani, a favourite spot…"
+              maxlength="120" /></label
+          ><button id="near-me" class="button outline" type="button">
+            <span aria-hidden="true">◎</span> Near me</button
+          ><button id="reset-location" class="text-button" type="button" hidden>
+            Clear location
+          </button>
+        </div>
+        <div class="filter-row">
+          <div
+            id="filters"
+            role="group"
+            aria-label="Filter by editorial sentiment"
+          >
+            <button data-filter="all" aria-pressed="true">All spots</button
+            ><button data-filter="positive" aria-pressed="false">
+              Positive</button
+            ><button data-filter="neutral" aria-pressed="false">Neutral</button
+            ><button data-filter="negative" aria-pressed="false">
+              Negative</button
+            ><button data-filter="unknown" aria-pressed="false">
+              Unverified
+            </button>
+          </div>
+          <span id="result-count" role="status">Loading the trail…</span>
+        </div>
+        <div class="neighbourhood-tools">
+          <label for="radius">Distance from me</label
+          ><select id="radius" disabled>
+            <option value="">All distances</option>
+            <option value="2">Within 2 km</option>
+            <option value="5">Within 5 km</option>
+            <option value="10">Within 10 km</option></select
+          ><span
+            >Choose Near me to find your closest stops. Five Chennai
+            samples.</span
+          >
+        </div>
+        <p id="location-status" class="status-line" role="status"></p>
+        <div class="discovery-grid">
+          <div class="map-options">
+            <section
+              id="paid-map-panel"
+              class="map-panel"
+              aria-labelledby="paid-map-title"
+            >
+              <div class="map-option-heading">
+                <p class="eyebrow">CHENNAI / YOUR NEXT FOOD DETOUR</p>
+                <h3 id="paid-map-title">
+                  Follow the heads. Find your next bite.
+                </h3>
+                <p>
+                  Custom CSV pins with editorial sentiment and video links.
+                  Usage charges apply beyond your account's free allowance.
+                  Browsing the free map never loads this API.
+                </p>
+              </div>
+              <div class="map-brand-strip">
+                <img
+                  src="./brand/irfans-view-channel.jpg"
+                  alt="Irfan’s View channel logo"
+                  width="52"
+                  height="52"
+                />
+                <div>
+                  <strong>irfan’s view</strong
+                  ><span>THE CHENNAI FOOD TRAIL</span>
+                </div>
+                <span class="brand-concept">Private concept</span>
+              </div>
+              <div class="map-topline">
+                <span
+                  ><span class="live-dot"></span> EXPLORE THE
+                  NEIGHBOURHOOD</span
+                ><span>CHENNAI ↗</span>
+              </div>
+              <div class="map-area-action">
+                <button id="search-area" class="button outline" disabled>
+                  Search this area</button
+                ><span>Scroll the page to browse · Ctrl + scroll to zoom</span>
+              </div>
+              <div id="map" aria-label="Restaurant map">
+                <div class="map-placeholder">
+                  <div class="map-grid-art" aria-hidden="true">
+                    <span>01</span><span>02</span><span>03</span><span>04</span
+                    ><span>05</span>
+                  </div>
+                  <div class="map-consent">
+                    <span class="map-symbol" aria-hidden="true">◎</span>
+                    <h3>A whole city.<br />A few delicious stops.</h3>
+                    <p>
+                      Load Google Maps to explore the pins. Google receives your
+                      IP and browser data. Browse the list without loading the
+                      map.
+                    </p>
+                    <button id="load-map" class="button primary">
+                      Load Google Maps <span aria-hidden="true">↗</span>
+                    </button>
+                    <p id="map-feedback" role="alert" tabindex="-1" hidden></p>
+                  </div>
+                </div>
+              </div>
+              <p id="map-status" class="map-status" role="status">
+                Your location stays off until you choose Near me.
+              </p>
+              <div class="map-legend">
+                <span><i class="legend-dot positive"></i>Positive</span
+                ><span><i class="legend-dot neutral"></i>Neutral</span
+                ><span><i class="legend-dot negative"></i>Negative</span
+                ><span><i class="legend-dot unknown"></i>Unverified</span>
+              </div>
+            </section>
+          </div>
+        </div>
+        <section class="restaurant-stories" aria-label="Restaurant stories">
+          <h2>Found a spot? <em>Get the story.</em></h2>
+          <div class="results-panel">
+            <div id="restaurants" aria-label="Restaurant results"></div>
+            <div id="empty-state" class="empty-state" hidden>
+              <h3>No bites here yet.</h3>
+              <p>
+                Try another search or sentiment. This is a five-stop sample, not
+                every restaurant in the city.
+              </p>
+              <button id="reset-filters" class="button outline">
+                Show all spots
+              </button>
+            </div>
+          </div>
+        </section>
+        <details class="map-alternatives">
+          <summary>Single-place preview &amp; map options</summary>
+          <section
+            id="free-map-panel"
+            class="map-panel free-map-panel"
+            aria-labelledby="free-map-title"
+          >
+            <div class="map-option-heading">
+              <p class="eyebrow">OPTION 01 / FREE GOOGLE PREVIEW</p>
+              <h3 id="free-map-title">One delicious stop.</h3>
+              <p>
+                A little hungry? Pick a stop and explore its Google map, then
+                watch Irfan’s original review. Google may display ads.
+              </p>
+            </div>
+            <div class="embed-controls">
+              <label for="embed-restaurant">Choose a restaurant</label
+              ><select id="embed-restaurant" disabled>
+                <option>Loading restaurants...</option>
+              </select>
+              <p id="embed-detail">
+                Choose a place to see its editorial rating and review.
+              </p>
+            </div>
+            <div class="map-brand-strip">
+              <img
+                src="./brand/irfans-view-channel.jpg"
+                alt="Irfan’s View channel logo"
+                width="52"
+                height="52"
+              />
+              <div>
+                <strong>irfan’s view</strong><span>THE CHENNAI FOOD TRAIL</span>
+              </div>
+              <span class="brand-concept">Private concept</span>
+            </div>
+            <div class="restaurant-cloud" aria-label="Selected restaurant">
+              <span class="cloud-kicker">YOUR NEXT BITE</span
+              ><a
+                class="cloud-place"
+                target="_blank"
+                rel="noopener noreferrer"
+                hidden
+              ></a>
+              <p class="cloud-detail">
+                Choose a restaurant from the food trail.
+              </p>
+              <a
+                id="embed-video"
+                class="cloud-review"
+                target="_blank"
+                rel="noopener noreferrer"
+                hidden
+                ><span class="youtube-logo" aria-hidden="true">▶</span> Watch
+                Irfan’s review <span aria-hidden="true">↗</span></a
+              >
+            </div>
+            <div id="embed-map" class="embed-map">
+              <p>
+                Preview a restaurant on Google's standard map. Loading sends
+                your IP, browser data and selected place to Google.
+              </p>
+            </div>
+            <div class="embed-actions">
+              <button id="load-embed" class="button primary">
+                Load free Google map</button
+              ><button id="unload-embed" class="button outline" hidden>
+                Unload free map
+              </button>
+              <p id="embed-status" role="status">
+                The interactive paid map stays off when you load this option.
+              </p>
+              <p id="embed-error" role="alert" tabindex="-1" hidden></p>
+            </div>
+            <p class="map-option-note">
+              Search and sentiment filters update the restaurant chooser. Near
+              me sorts the choices; it does not center this free map on your
+              coordinates. Google's place match may differ from the approximate
+              CSV pin.
+            </p>
+          </section>
+          <section class="map-comparison" aria-labelledby="comparison-title">
+            <p class="eyebrow">IRFAN'S REVIEW / TWO WAYS TO EXPLORE</p>
+            <h3 id="comparison-title">Which map fits your food trail?</h3>
+            <div class="comparison-options">
+              <a href="#free-map-panel"
+                ><strong>01 / Free embed</strong
+                ><span
+                  >One restaurant at a time. Google's standard pin; our rating
+                  and video stay beside the map.</span
+                ><b>Free single-place preview</b></a
+              >
+              <a href="#paid-map-panel"
+                ><strong>02 / Interactive map</strong
+                ><span
+                  >All matching CSV pins together, custom sentiment colors,
+                  video popups and Near me centering.</span
+                ><b>Paid API with a monthly free allowance</b></a
+              >
+            </div>
+            <p>
+              Try either option below. Each loads only when you choose it. The
+              free preview works without setup; no payment is taken on this
+              page.
+            </p>
+            <p class="comparison-pricing">
+              Dynamic Maps: eligible India accounts get 70,000 free loads/month,
+              then US$2.10 per 1,000 through 5 million. Global: 10,000 free,
+              then US$7 per 1,000 through 100,000. Taxes and later tiers vary.
+              <a
+                href="https://developers.google.com/maps/billing-and-pricing/pricing-india"
+                target="_blank"
+                rel="noopener noreferrer"
+                >India pricing</a
+              >
+              ·
+              <a
+                href="https://developers.google.com/maps/billing-and-pricing/pricing"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Global pricing</a
+              >. Checked 2 November 2026.
+            </p>
+          </section>
+        </details>
+        <p class="data-note">
+          A starting point, not a verdict. Sentiments are editorial readings of
+          video descriptions, not Google ratings. Approximate pins are marked;
+          check the original location before travelling.
+        </p>
+      </section>
+      <section id="about" class="about-section shell">
+        <span class="about-mark" aria-hidden="true">i.</span>
+        <div>
+          <p class="eyebrow">BEHIND EVERY PIN, A STORY</p>
+          <h2>Food tastes better<br />with a little <em>discovery.</em></h2>
+          <p>
+            Irfan’s View explores food, people and places. This private concept
+            connects five of those restaurant stories to a map, so your next
+            discovery can begin with a video.
+          </p>
+          <a
+            class="text-link"
+            href="https://www.youtube.com/@irfansview1"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Explore Irfan’s View on YouTube ↗</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer shell">
+      <div>
+        <strong>irfan’s / FOOD TRAIL</strong>
+        <p>
+          Private concept · Not an official Irfan’s View website.<br />Brand
+          permission and public launch approval pending.
+        </p>
+      </div>
+      <div class="footer-links">
+        <button id="privacy-button" class="text-button">
+          Privacy &amp; about this concept</button
+        ><a href="./THIRD_PARTY_NOTICES.txt">Open-source notices</a
+        ><span>Made for the love of the next bite.</span>
+      </div>
+    </footer>
+    <dialog id="privacy-dialog" aria-labelledby="privacy-title">
+      <h2 id="privacy-title">Your visit, your choice.</h2>
+      <p>
+        This private concept uses no analytics or location storage. Near me asks
+        your browser for coordinates and uses them in memory to sort nearby
+        spots. If Google Maps is loaded, centering it shares the viewport with
+        Google.
+      </p>
+      <p>
+        Google receives your IP and browser data only when you load Maps.
+        Following a video link opens YouTube. Reload to unload Maps; manage
+        location permission in your browser settings. The free embed sends the
+        selected restaurant to Google and may show ads. Use Unload free map to
+        remove that frame. The paid map loads separately; reload the page to
+        remove its script. Near me sorts the free chooser locally and only
+        centers your coordinates in the paid map if loaded.
+      </p>
+      <p>
+        Editorial labels summarize cited video descriptions. They are not
+        ratings supplied by Google or categorical ratings supplied by Irfan.
+        Restaurant details may have changed.
+      </p>
+      <p>
+        <a
+          href="https://policies.google.com/privacy"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Google privacy policy ↗</a
+        >
+        ·
+        <a
+          href="https://cloud.google.com/maps-platform/terms"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Maps terms ↗</a
+        >
+      </p>
+      <form method="dialog"><button class="button primary">Close</button></form>
+    </dialog>
+    <noscript
+      >This food trail needs JavaScript for search and maps. Visit
+      <a href="https://www.youtube.com/@irfansview1">Irfan’s View on YouTube</a
+      >.</noscript
+    >
+  </body>
+</html>
