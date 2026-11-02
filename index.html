@@ -11,7 +11,7 @@
       content="Discover five restaurant stories from Irfan's View in a private food-map concept."
     />
     <title>Irfan’s food trail — a little hungry, a little curious</title>
-    <script type="module" crossorigin src="./assets/index-vWSqFE6E.js"></script>
+    <script type="module" crossorigin src="./assets/index-B2cgH2Lw.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-BzvxkS_5.css">
   </head>
   <body>
@@ -299,6 +299,23 @@
               ><button id="unload-embed" class="button outline" hidden>
                 Unload free map
               </button>
+              <button
+                id="center-embed"
+                class="button outline"
+                disabled
+                aria-describedby="embed-location-note"
+              >
+                Center on my location
+              </button>
+              <button id="restore-embed" class="button outline" hidden>
+                Back to selected restaurant
+              </button>
+              <p id="embed-location-note">
+                After loading the free map, center it using your browser
+                location. This shares your coordinates with Google. Your browser
+                will ask for permission when needed; this site does not save
+                your location.
+              </p>
               <p id="embed-status" role="status">
                 The interactive paid map stays off when you load this option.
               </p>
@@ -307,8 +324,9 @@
             <p class="map-option-note">
               Search and sentiment filters update the restaurant chooser. Near
               me sorts the choices; it does not center this free map on your
-              coordinates. Google's place match may differ from the approximate
-              CSV pin.
+              coordinates. Use Center on my location inside this preview to
+              share your location with Google and center the free map. Google's
+              place match may differ from the approximate CSV pin.
             </p>
           </section>
           <section class="map-comparison" aria-labelledby="comparison-title">
@@ -411,7 +429,10 @@
         selected restaurant to Google and may show ads. Use Unload free map to
         remove that frame. The paid map loads separately; reload the page to
         remove its script. Near me sorts the free chooser locally and only
-        centers your coordinates in the paid map if loaded.
+        centers your coordinates in the paid map if loaded. The free preview has
+        a separate Center on my location button that shares your browser
+        coordinates with Google to center that iframe. Back to selected
+        restaurant or Unload free map removes that location view.
       </p>
       <p>
         Editorial labels summarize cited video descriptions. They are not
