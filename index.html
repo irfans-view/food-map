@@ -11,8 +11,8 @@
       content="Discover five restaurant stories from Irfan's View in a private food-map concept."
     />
     <title>Irfan’s food trail — a little hungry, a little curious</title>
-    <script type="module" crossorigin src="./assets/index-B2cgH2Lw.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BzvxkS_5.css">
+    <script type="module" crossorigin src="./assets/index-B4Xnilol.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CfFLn5zM.css">
   </head>
   <body>
     <a class="skip-link" href="#explore">Skip to restaurants</a>
@@ -35,59 +35,58 @@
       </nav>
     </header>
     <main id="home">
-      <section class="hero shell" aria-labelledby="welcome">
-        <div class="hero-copy">
-          <p class="eyebrow">
-            <span class="live-dot"></span> GOOD FOOD. GREAT STORIES.
-          </p>
-          <h1 id="welcome">Big appetite.<br />Local <em>discoveries.</em></h1>
-          <p class="hero-description">
-            Welcome to Irfan’s food trail. From that first bite to your next
-            favourite spot — discover the places behind the stories.
-          </p>
-          <a class="button primary" href="#explore"
-            >Find your next bite <span aria-hidden="true">↗</span></a
-          >
-          <div class="hero-note">
-            <span class="mini-compass" aria-hidden="true">✳</span
-            ><span
-              >A taste of Chennai.<br /><strong
-                >A whole lot to explore.</strong
-              ></span
-            >
-          </div>
+      <section
+        class="foodverse-intro shell"
+        aria-labelledby="foodverse-heading"
+      >
+        <div>
+          <p class="eyebrow">Private concept ? THE FOODVERSE</p>
+          <h1 id="foodverse-heading">
+            Your next bite.<br /><em>A new adventure.</em>
+          </h1>
+          <p>A food map, a little curiosity, and stories worth following.</p>
         </div>
-        <figure class="portrait-stage">
-          <img
-            class="irfan-portrait"
-            src="./brand/irfans-view-channel.jpg"
-            alt="Irfan from his official YouTube channel portrait"
-            width="900"
-            height="900"
-            fetchpriority="high"
-          />
-          <figcaption>IRFAN’S VIEW / THE PERSON BEHIND THE BITES</figcaption>
-          <span class="portrait-sticker" aria-hidden="true"
-            >Good food.<br />Great detours.</span
+        <div class="collection-note">
+          <strong>05</strong
+          ><span
+            >sourced Chennai stops<br />A growing collection, honestly
+            labelled.</span
           >
-        </figure>
+        </div>
       </section>
-      <div class="trail-strip" aria-hidden="true">
-        <div class="shell">
-          <span>WATCH THE STORY</span><b>✳</b><span>FIND THE PLACE</span
-          ><b>✳</b><span>MAKE IT YOUR NEXT STOP</span><b>✳</b
-          ><span>COME HUNGRY</span>
-        </div>
+      <div class="experience-navigation shell">
+        <label for="experience-select">Explore the Foodverse</label>
+        <select id="experience-select"></select>
+        <div
+          id="experience-tabs"
+          role="tablist"
+          aria-label="Food experiences"
+        ></div>
       </div>
       <section
+        id="experience-panel"
+        class="experience-panel shell"
+        role="tabpanel"
+        aria-labelledby="experience-title"
+        hidden
+      >
+        <p class="eyebrow">A LITTLE CURIOSITY GOES A LONG WAY</p>
+        <h2 id="experience-title"></h2>
+        <div id="experience-body"></div>
+      </section>
+
+      <section
         id="explore"
+        role="tabpanel"
         class="explore shell"
-        aria-labelledby="explore-title"
+        aria-labelledby="tab-map"
       >
         <div class="section-heading">
           <div>
             <p class="eyebrow">THE FOOD MAP / CHENNAI EDITION</p>
-            <h2 id="explore-title">EXPLORE THE<br /><em>NEIGHBOURHOOD.</em></h2>
+            <h2 id="explore-title">
+              Start with a place.<br /><em>Follow the story.</em>
+            </h2>
           </div>
           <p>
             Five stories to start with.<br />Pick a place. Press play. Head out.
@@ -379,6 +378,50 @@
           check the original location before travelling.
         </p>
       </section>
+      <section class="hero shell" aria-labelledby="welcome">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="live-dot"></span> GOOD FOOD. GREAT STORIES.
+          </p>
+          <h2 id="welcome">Big appetite.<br />Local <em>discoveries.</em></h2>
+          <p class="hero-description">
+            Welcome to Irfan’s food trail. From that first bite to your next
+            favourite spot — discover the places behind the stories.
+          </p>
+          <a class="button primary" href="#explore"
+            >Find your next bite <span aria-hidden="true">↗</span></a
+          >
+          <div class="hero-note">
+            <span class="mini-compass" aria-hidden="true">✳</span
+            ><span
+              >A taste of Chennai.<br /><strong
+                >A whole lot to explore.</strong
+              ></span
+            >
+          </div>
+        </div>
+        <figure class="portrait-stage">
+          <img
+            class="irfan-portrait"
+            src="./brand/irfans-view-channel.jpg"
+            alt="Irfan from his official YouTube channel portrait"
+            width="900"
+            height="900"
+            fetchpriority="high"
+          />
+          <figcaption>IRFAN’S VIEW / THE PERSON BEHIND THE BITES</figcaption>
+          <span class="portrait-sticker" aria-hidden="true"
+            >Good food.<br />Great detours.</span
+          >
+        </figure>
+      </section>
+      <div class="trail-strip" aria-hidden="true">
+        <div class="shell">
+          <span>WATCH THE STORY</span><b>✳</b><span>FIND THE PLACE</span
+          ><b>✳</b><span>MAKE IT YOUR NEXT STOP</span><b>✳</b
+          ><span>COME HUNGRY</span>
+        </div>
+      </div>
       <section id="about" class="about-section shell">
         <span class="about-mark" aria-hidden="true">i.</span>
         <div>
@@ -438,6 +481,11 @@
         Editorial labels summarize cited video descriptions. They are not
         ratings supplied by Google or categorical ratings supplied by Irfan.
         Restaurant details may have changed.
+      </p>
+      <p>
+        Personal rankings, passport and challenge progress last for this visit
+        only. Export saves a copy to your device. Food notes and choices are not
+        uploaded or counted as public votes.
       </p>
       <p>
         <a
