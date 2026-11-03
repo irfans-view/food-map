@@ -11,8 +11,8 @@
       content="Explore three years of Irfan's View stories, a sourced food map and your own food discoveries."
     />
     <title>Irfan’s food trail — a little hungry, a little curious</title>
-    <script type="module" crossorigin src="./assets/index-CvajADOa.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DcXObm4L.css">
+    <script type="module" crossorigin src="./assets/index-BLsJtlIR.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BUQ4Rbu2.css">
   </head>
   <body>
     <a class="skip-link" href="#explore">Skip to restaurants</a>
@@ -35,15 +35,52 @@
       </nav>
     </header>
     <main id="home">
+      <section class="hero shell" aria-labelledby="welcome">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="live-dot"></span> GOOD FOOD. GREAT STORIES.
+          </p>
+          <h1 id="welcome">Big appetite.<br />Local <em>discoveries.</em></h1>
+          <p class="hero-description">
+            Welcome to Irfan’s food trail. From that first bite to your next
+            favourite spot — discover the places behind the stories.
+          </p>
+          <a class="button primary" href="#explore"
+            >Find your next bite <span aria-hidden="true">↗</span></a
+          >
+          <div class="hero-note">
+            <span class="mini-compass" aria-hidden="true">✳</span
+            ><span
+              >A taste of Chennai.<br /><strong
+                >A whole lot to explore.</strong
+              ></span
+            >
+          </div>
+        </div>
+        <figure class="portrait-stage">
+          <img
+            class="irfan-portrait"
+            src="./brand/irfans-view-channel.jpg"
+            alt="Irfan from his official YouTube channel portrait"
+            width="900"
+            height="900"
+            fetchpriority="high"
+          />
+          <figcaption>IRFAN’S VIEW / THE PERSON BEHIND THE BITES</figcaption>
+          <span class="portrait-sticker" aria-hidden="true"
+            >Good food.<br />Great detours.</span
+          >
+        </figure>
+      </section>
       <section
         class="foodverse-intro shell"
         aria-labelledby="foodverse-heading"
       >
         <div>
           <p class="eyebrow">Private concept · THE FOODVERSE</p>
-          <h1 id="foodverse-heading">
+          <h2 id="foodverse-heading">
             Your next bite.<br /><em>A new adventure.</em>
-          </h1>
+          </h2>
           <p>A food map, a little curiosity, and stories worth following.</p>
         </div>
         <div class="collection-note">
@@ -89,7 +126,8 @@
             </h2>
           </div>
           <p>
-            Five stories to start with.<br />Pick a place. Press play. Head out.
+            Restaurant stories to start with.<br />Pick a place. Press play.
+            Head out.
           </p>
         </div>
         <div class="explorer-toolbar">
@@ -108,21 +146,6 @@
           </button>
         </div>
         <div class="filter-row">
-          <div
-            id="filters"
-            role="group"
-            aria-label="Filter by editorial sentiment"
-          >
-            <button data-filter="all" aria-pressed="true">All spots</button
-            ><button data-filter="positive" aria-pressed="false">
-              Positive</button
-            ><button data-filter="neutral" aria-pressed="false">Neutral</button
-            ><button data-filter="negative" aria-pressed="false">
-              Negative</button
-            ><button data-filter="unknown" aria-pressed="false">
-              Unverified
-            </button>
-          </div>
           <span id="result-count" role="status">Loading the trail…</span>
         </div>
         <div class="neighbourhood-tools">
@@ -132,10 +155,7 @@
             <option value="2">Within 2 km</option>
             <option value="5">Within 5 km</option>
             <option value="10">Within 10 km</option></select
-          ><span
-            >Choose Near me to find your closest stops. Five Chennai
-            samples.</span
-          >
+          ><span>Choose Near me to find your closest reviewed stops.</span>
         </div>
         <p id="location-status" class="status-line" role="status"></p>
         <div class="discovery-grid">
@@ -191,8 +211,8 @@
                     <h3>A whole city.<br />A few delicious stops.</h3>
                     <p>
                       Load Google Maps to explore the pins. Google receives your
-                      IP and browser data. Browse the list without loading the
-                      map.
+                      IP and browser data. Use the free single-place preview
+                      below without loading this map.
                     </p>
                     <button id="load-map" class="button primary">
                       Load Google Maps <span aria-hidden="true">↗</span>
@@ -204,31 +224,9 @@
               <p id="map-status" class="map-status" role="status">
                 Your location stays off until you choose Near me.
               </p>
-              <div class="map-legend">
-                <span><i class="legend-dot positive"></i>Positive</span
-                ><span><i class="legend-dot neutral"></i>Neutral</span
-                ><span><i class="legend-dot negative"></i>Negative</span
-                ><span><i class="legend-dot unknown"></i>Unverified</span>
-              </div>
             </section>
           </div>
         </div>
-        <section class="restaurant-stories" aria-label="Restaurant stories">
-          <h2>Found a spot? <em>Get the story.</em></h2>
-          <div class="results-panel">
-            <div id="restaurants" aria-label="Restaurant results"></div>
-            <div id="empty-state" class="empty-state" hidden>
-              <h3>No bites here yet.</h3>
-              <p>
-                Try another search or sentiment. This is a five-stop sample, not
-                every restaurant in the city.
-              </p>
-              <button id="reset-filters" class="button outline">
-                Show all spots
-              </button>
-            </div>
-          </div>
-        </section>
         <details class="map-alternatives">
           <summary>Single-place preview &amp; map options</summary>
           <section
@@ -321,8 +319,8 @@
               <p id="embed-error" role="alert" tabindex="-1" hidden></p>
             </div>
             <p class="map-option-note">
-              Search and sentiment filters update the restaurant chooser. Near
-              me sorts the choices; it does not center this free map on your
+              Search and distance choices update the restaurant chooser. Near me
+              sorts the choices; it does not center this free map on your
               coordinates. Use Center on my location inside this preview to
               share your location with Google and center the free map. Google's
               place match may differ from the approximate CSV pin.
@@ -342,8 +340,8 @@
               <a href="#paid-map-panel"
                 ><strong>02 / Interactive map</strong
                 ><span
-                  >All matching CSV pins together, custom sentiment colors,
-                  video popups and Near me centering.</span
+                  >All matching CSV pins together, custom restaurant pins, video
+                  popups and Near me centering.</span
                 ><b>Paid API with a monthly free allowance</b></a
               >
             </div>
@@ -378,43 +376,6 @@
           check the original location before travelling.
         </p>
       </section>
-      <section class="hero shell" aria-labelledby="welcome">
-        <div class="hero-copy">
-          <p class="eyebrow">
-            <span class="live-dot"></span> GOOD FOOD. GREAT STORIES.
-          </p>
-          <h2 id="welcome">Big appetite.<br />Local <em>discoveries.</em></h2>
-          <p class="hero-description">
-            Welcome to Irfan’s food trail. From that first bite to your next
-            favourite spot — discover the places behind the stories.
-          </p>
-          <a class="button primary" href="#explore"
-            >Find your next bite <span aria-hidden="true">↗</span></a
-          >
-          <div class="hero-note">
-            <span class="mini-compass" aria-hidden="true">✳</span
-            ><span
-              >A taste of Chennai.<br /><strong
-                >A whole lot to explore.</strong
-              ></span
-            >
-          </div>
-        </div>
-        <figure class="portrait-stage">
-          <img
-            class="irfan-portrait"
-            src="./brand/irfans-view-channel.jpg"
-            alt="Irfan from his official YouTube channel portrait"
-            width="900"
-            height="900"
-            fetchpriority="high"
-          />
-          <figcaption>IRFAN’S VIEW / THE PERSON BEHIND THE BITES</figcaption>
-          <span class="portrait-sticker" aria-hidden="true"
-            >Good food.<br />Great detours.</span
-          >
-        </figure>
-      </section>
       <div class="trail-strip" aria-hidden="true">
         <div class="shell">
           <span>WATCH THE STORY</span><b>✳</b><span>FIND THE PLACE</span
@@ -429,7 +390,7 @@
           <h2>Food tastes better<br />with a little <em>discovery.</em></h2>
           <p>
             Irfan’s View explores food, people and places. This private concept
-            connects five of those restaurant stories to a map, so your next
+            connects selected restaurant stories to a map, so your next
             discovery can begin with a video.
           </p>
           <a
