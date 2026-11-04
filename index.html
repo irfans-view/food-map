@@ -11,8 +11,8 @@
       content="Explore three years of Irfan's View stories, a sourced food map and your own food discoveries."
     />
     <title>Irfan’s food trail — a little hungry, a little curious</title>
-    <script type="module" crossorigin src="./assets/index-DGGnX72R.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CI5EEH5v.css">
+    <script type="module" crossorigin src="./assets/index-BwKRo8K6.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B778LW7A.css">
   </head>
   <body>
     <a class="skip-link" href="#explore">Skip to restaurants</a>
@@ -82,6 +82,10 @@
             Your next bite.<br /><em>A new adventure.</em>
           </h2>
           <p>A food map, a little curiosity, and stories worth following.</p>
+          <p>
+            Heading to a reviewed restaurant? “Still open? Let’s check” can help
+            you decide if you need a plan B.
+          </p>
         </div>
         <div class="collection-note">
           <strong>05</strong
@@ -112,6 +116,87 @@
         <div id="experience-body"></div>
       </section>
 
+      <section
+        id="business-status-panel"
+        class="map-panel status-panel shell"
+        role="tabpanel"
+        aria-labelledby="tab-status"
+        hidden
+      >
+        <div class="map-option-heading">
+          <p class="eyebrow">CHECK BEFORE YOU GO</p>
+          <h3 id="status-title">Still open? Let’s check.</h3>
+          <p>
+            Before heading to a reviewed restaurant, check whether Google still
+            lists it as operating and decide if you need a plan B. Pick a
+            restaurant from the food trail, or enter another one's name and
+            approximate coordinates. We search within 1.5 km and show Google's
+            reported business status and hours. Checking sends your query to
+            Google.
+          </p>
+        </div>
+        <form id="status-form" class="status-form">
+          <fieldset>
+            <legend>Which restaurant?</legend>
+            <label class="status-mode"
+              ><input type="radio" name="status-mode" value="list" checked />
+              Pick from the food trail</label
+            ><label class="status-mode"
+              ><input type="radio" name="status-mode" value="manual" /> Enter
+              another restaurant</label
+            >
+          </fieldset>
+          <div id="status-list-fields" class="embed-controls">
+            <label for="status-restaurant"
+              >Choose a food-trail restaurant to check</label
+            >
+            <select id="status-restaurant" disabled>
+              <option>Loading restaurants...</option>
+            </select>
+          </div>
+          <div id="status-manual-fields" class="embed-controls" hidden>
+            <label for="status-name">Restaurant name</label>
+            <input
+              id="status-name"
+              type="text"
+              maxlength="120"
+              autocomplete="off"
+            />
+            <label for="status-lat">Latitude (decimal degrees)</label>
+            <input
+              id="status-lat"
+              type="number"
+              step="any"
+              min="-90"
+              max="90"
+              inputmode="decimal"
+            />
+            <label for="status-lng">Longitude (decimal degrees)</label>
+            <input
+              id="status-lng"
+              type="number"
+              step="any"
+              min="-180"
+              max="180"
+              inputmode="decimal"
+            />
+          </div>
+          <div class="embed-actions">
+            <button id="status-check" class="button primary" type="submit">
+              Check if it's still open
+            </button>
+            <p id="status-status" class="status-line" role="status"></p>
+            <p id="status-error" role="alert" tabindex="-1" hidden></p>
+          </div>
+        </form>
+        <div id="status-result" aria-live="polite"></div>
+        <p class="map-option-note">
+          Based on Google's public listing data, which can lag real-world
+          changes. This is not a legal determination of operating status; call
+          ahead to confirm. Hours shown are Google's reported weekly schedule,
+          not a live "open now" check.
+        </p>
+      </section>
       <section
         id="explore"
         role="tabpanel"
@@ -442,6 +527,13 @@
         Editorial labels summarize cited video descriptions. They are not
         ratings supplied by Google or categorical ratings supplied by Irfan.
         Restaurant details may have changed.
+      </p>
+      <p>
+        “Still open? Let’s check.” sends a restaurant name and coordinates to
+        Google only when you choose Check if it's still open. Nothing you type
+        there is saved by this site. Google's reported business status and hours
+        can be stale or wrong and are not a legal determination of operating
+        status.
       </p>
       <p>
         Food games run only in this browser tab. Guesses are not stored or
