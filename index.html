@@ -8,558 +8,78 @@
     <meta name="theme-color" content="#f6f3eb" />
     <meta
       name="description"
-      content="A public demo prepared for Irfan’s approval, with sourced food, travel and kitchen stories."
+      content="Explore three years of Irfan's View stories, a sourced food map and your own food discoveries."
     />
-    <title>Irfan’s View — demo for Irfan’s approval</title>
-    <script type="module" crossorigin src="./assets/index-BE_mBo-8.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DeLjwUjn.css">
+    <title>Irfan’s food trail — a little hungry, a little curious</title>
+    <script type="module" crossorigin src="./assets/index-CERdTqYH.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B778LW7A.css">
   </head>
   <body>
-    <a class="skip-link" href="#food-guide">Skip to discoveries</a>
-    <div
-      class="proposal-ribbon"
-      role="note"
-      aria-label="Demo status and attribution"
-    >
-      <strong>Demo site for Irfan’s approval</strong>
-      <span>Public concept · Approval and sponsorship are pending</span>
-      <small
-        >The repository owner does not advertise this content or use it for
-        personal purposes. All images and video thumbnails are sourced from and
-        attributed to Irfan’s View for review by Irfan, a potential project
-        sponsor.</small
-      >
-    </div>
+    <a class="skip-link" href="#explore">Skip to restaurants</a>
     <header class="site-header shell">
-      <a class="wordmark" href="#home" aria-label="Irfan’s View home"
-        ><span class="brand-icon" aria-hidden="true">i.</span
-        ><span>irfan’s view<small>GOOD FOOD. GOOD COMPANY.</small></span></a
+      <a class="wordmark" href="#home" aria-label="Irfan’s food trail home"
+        ><span class="brand-icon" aria-hidden="true">i.</span> irfan’s<span
+          class="wordmark-sub"
+          >FOOD TRAIL</span
+        ></a
       >
       <nav aria-label="Main navigation">
-        <a href="#food-guide">Eat</a><a href="#travel-notes">Explore</a
-        ><a href="#kitchen">Cook</a><a href="#everyday">Life</a>
+        <a href="#explore">The food map</a><a href="#about">The story</a
+        ><a
+          class="channel-link"
+          href="https://www.youtube.com/@irfansview1"
+          target="_blank"
+          rel="noopener noreferrer"
+          >YouTube ↗</a
+        >
       </nav>
-      <button
-        class="sv-pocket-button"
-        data-preview="saved"
-        aria-label="Open saved discoveries"
-      >
-        My little list <span id="saved-count">0</span>
-      </button>
     </header>
     <main id="home">
-      <section class="sv-hero shell" aria-labelledby="welcome">
-        <div class="sv-hero-copy">
+      <section class="hero shell" aria-labelledby="welcome">
+        <div class="hero-copy">
           <p class="eyebrow">
-            <span lang="ta">வணக்கம்!</span> COME ON IN. THERE’S ROOM FOR
-            EVERYONE.
+            <span class="live-dot"></span> GOOD FOOD. GREAT STORIES.
           </p>
-          <h1 id="welcome">
-            A little hungry.<br />A little curious.<br /><em
-              >A whole lot of heart.</em
-            >
-          </h1>
-          <p>
-            The places you’ve watched. The dishes you’ve wondered about. The
-            stories that feel like home. A little more of the world of Irfan’s
-            View, just for you.
+          <h1 id="welcome">Big appetite.<br />Local <em>discoveries.</em></h1>
+          <p class="hero-description">
+            Welcome to Irfan’s food trail. From that first bite to your next
+            favourite spot — discover the places behind the stories.
           </p>
-          <div class="sv-actions">
-            <a class="button primary" href="#food-guide"
-              >Find your next favourite ↗</a
-            ><a class="sv-link" href="#everyday">Stay for the stories ↓</a>
-          </div>
-          <div class="sv-handwritten">
-            From one good video to a lovely little day.
-          </div>
-        </div>
-        <div class="sv-hero-art">
-          <span class="sv-orbit" aria-hidden="true">✳</span>
-          <figure class="sv-portrait">
-            <img
-              class="irfan-portrait"
-              src="./brand/irfans-view-channel.jpg"
-              alt="Irfan, from his official channel portrait"
-              width="900"
-              height="900"
-              fetchpriority="high"
-            />
-            <figcaption>FOOD. PEOPLE. PLACES. IRFAN.</figcaption>
-          </figure>
-          <a
-            class="sv-postcard"
-            href="https://www.youtube.com/watch?v=38FqWdcclFs"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><img
-              src="./proposal/38FqWdcclFs.jpg"
-              alt="Seeraga Samba biriyani video from Irfan’s View"
-              width="480"
-              height="360"
-              loading="lazy"
-            /><span>Today’s rabbit hole: biriyani ↗</span></a
-          ><span class="sv-round-note">Come hungry.<br />Leave happy.</span>
-        </div>
-      </section>
-      <div class="sv-marquee" aria-hidden="true">
-        <span>GOOD FOOD</span> ✳ <span>GREAT DETOURS</span> ✳
-        <span>FAMILIAR FACES</span> ✳ <span>LITTLE JOYS</span> ✳
-        <span>GOOD COMPANY</span>
-      </div>
-      <section
-        id="food-guide"
-        class="sv-section shell"
-        aria-labelledby="food-heading"
-      >
-        <div class="sv-heading">
-          <div>
-            <p class="eyebrow">01 / SOMETHING DELICIOUS</p>
-            <h2 id="food-heading">
-              Saw it. Craved it.<br /><em>Let’s find it.</em>
-            </h2>
-          </div>
-          <p>
-            Turn “Where is this, bro?” into your next food detour. A few places
-            from the videos, with the original stories close by.
-          </p>
-        </div>
-        <div
-          class="sv-filter-row"
-          role="group"
-          aria-label="Filter food discoveries"
-        >
-          <button data-food-filter="all" aria-pressed="true">
-            All discoveries</button
-          ><button data-food-filter="traditional" aria-pressed="false">
-            Tamil flavours</button
-          ><button data-food-filter="casual" aria-pressed="false">
-            Casual bites</button
-          ><span id="food-filter-status" role="status"
-            >3 places to explore</span
+          <a class="button primary" href="#explore"
+            >Find your next bite <span aria-hidden="true">↗</span></a
           >
-        </div>
-        <div class="sv-food-grid">
-          <article class="sv-food-card" data-food-kind="traditional">
-            <img
-              src="./proposal/tQPSROQLw9U.jpg"
-              alt="Shree Konar Vilas original video thumbnail"
-              width="480"
-              height="360"
-              loading="lazy"
-            />
-            <div class="sv-card-body">
-              <div class="sv-card-meta">
-                ANNA NAGAR · CHENNAI
-                <button
-                  class="sv-save"
-                  data-save="konar"
-                  data-label="Shree Konar Vilas"
-                  aria-pressed="false"
-                  aria-label="Save Shree Konar Vilas"
-                >
-                  ＋ Save
-                </button>
-              </div>
-              <h3>Madurai flavours.<br />A Chennai detour.</h3>
-              <p>
-                Shree Konar Vilas · A place to begin when you’re in the mood for
-                a Tamil food story.
-              </p>
-              <div class="sv-card-links">
-                <a
-                  class="sv-link"
-                  href="https://www.youtube.com/watch?v=tQPSROQLw9U"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Watch the original ↗</a
-                ><button class="sv-link" data-preview="konar">
-                  See the place →
-                </button>
-              </div>
-            </div>
-          </article>
-          <article class="sv-food-card" data-food-kind="casual">
-            <img
-              src="./proposal/w9lFuohFbYU.jpg"
-              alt="Alien Stone original video thumbnail"
-              width="480"
-              height="360"
-              loading="lazy"
-            />
-            <div class="sv-card-body">
-              <div class="sv-card-meta">
-                PERUNGUDI · CHENNAI
-                <button
-                  class="sv-save"
-                  data-save="alien"
-                  data-label="Alien Stone"
-                  aria-pressed="false"
-                  aria-label="Save Alien Stone"
-                >
-                  ＋ Save
-                </button>
-              </div>
-              <h3>A burger-sized<br />weekend plan.</h3>
-              <p>
-                Alien Stone · Tower burgers and crispy chicken from an invited
-                tasting in the source video.
-              </p>
-              <div class="sv-card-links">
-                <a
-                  class="sv-link"
-                  href="https://www.youtube.com/watch?v=w9lFuohFbYU"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Watch the original ↗</a
-                ><button class="sv-link" data-preview="alien">
-                  See the place →
-                </button>
-              </div>
-            </div>
-          </article>
-          <article class="sv-food-card" data-food-kind="casual">
-            <img
-              src="./proposal/Qjd0B9vRS6w.jpg"
-              alt="Barbeque Elite original video thumbnail"
-              width="480"
-              height="360"
-              loading="lazy"
-            />
-            <div class="sv-card-body">
-              <div class="sv-card-meta">
-                KOLATHUR · CHENNAI
-                <button
-                  class="sv-save"
-                  data-save="elite"
-                  data-label="Barbeque Elite"
-                  aria-pressed="false"
-                  aria-label="Save Barbeque Elite"
-                >
-                  ＋ Save
-                </button>
-              </div>
-              <h3>Bring your appetite.<br />And your people.</h3>
-              <p>
-                Barbeque Elite · Watch the tasting, find the source location,
-                then make a plan of your own.
-              </p>
-              <div class="sv-card-links">
-                <a
-                  class="sv-link"
-                  href="https://www.youtube.com/watch?v=Qjd0B9vRS6w"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Watch the original ↗</a
-                ><button class="sv-link" data-preview="elite">
-                  See the place →
-                </button>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="sv-section-foot">
-          <p>
-            From the video archive. Locations are approximate; check current
-            hours before a visit.
-          </p>
-          <a class="sv-link" href="#explore">Explore the working food map ↗</a>
-        </div>
-      </section>
-      <section
-        id="travel-notes"
-        class="sv-travel"
-        aria-labelledby="travel-heading"
-      >
-        <div class="shell sv-travel-grid">
-          <div class="sv-travel-photo">
-            <img
-              src="./proposal/ZGxlV0S5_9E.jpg"
-              alt="Masai Mara experience thumbnail from Irfan’s View"
-              width="480"
-              height="360"
-              loading="lazy"
-            /><span class="sv-photo-tag">POSTCARD No. 01 / KENYA</span
-            ><span class="sv-photo-caption"
-              >A long way from Chennai.<br />A story worth bringing home.</span
+          <div class="hero-note">
+            <span class="mini-compass" aria-hidden="true">✳</span
+            ><span
+              >A taste of Chennai.<br /><strong
+                >A whole lot to explore.</strong
+              ></span
             >
           </div>
-          <div class="sv-travel-copy">
-            <p class="eyebrow">02 / TAKE THE SCENIC ROUTE</p>
-            <h2 id="travel-heading">
-              The world is bigger<br />than your <em>weekend.</em>
-            </h2>
-            <p>
-              Keep the wonder of the video. Add a little help for the day you
-              finally go. A travel notebook for the curious, the dreamers, and
-              the “one day” planners.
-            </p>
-            <div class="sv-notebook-lines">
-              <span>01 <b>Watch the Masai Mara story</b></span
-              ><span>02 <b>Make your own planning checklist</b></span
-              ><span>03 <b>Save a little inspiration for later</b></span>
-            </div>
-            <div class="sv-actions">
-              <button class="button primary" data-preview="travel">
-                Open the travel notebook ↗</button
-              ><button
-                class="sv-save"
-                data-save="safari"
-                data-label="Masai Mara notebook"
-                aria-pressed="false"
-                aria-label="Save Masai Mara notebook"
-              >
-                ＋ Save
-              </button>
-            </div>
-            <p class="sv-fine">
-              Sample notebook · No packages or bookings on this preview.
-            </p>
-          </div>
         </div>
-      </section>
-      <section
-        id="kitchen"
-        class="sv-section shell"
-        aria-labelledby="kitchen-heading"
-      >
-        <div class="sv-heading">
-          <div>
-            <p class="eyebrow">03 / SOMETHING THAT FEELS LIKE HOME</p>
-            <h2 id="kitchen-heading">
-              From the screen<br />to <em>your kitchen.</em>
-            </h2>
-          </div>
-          <p>
-            Some videos make you hungry. Others make you want to call Amma. Keep
-            a little space for both.
-          </p>
-        </div>
-        <div class="sv-kitchen-grid">
-          <div class="sv-kitchen-image">
-            <img
-              src="./proposal/K-igRZ0l8rA.jpg"
-              alt="Amma’s Chicken Kuzhambu original video thumbnail"
-              width="480"
-              height="360"
-              loading="lazy"
-            /><span class="sv-photo-tag">THE KITCHEN NOTEBOOK</span>
-          </div>
-          <article class="sv-recipe-card">
-            <span class="sv-handwritten">A Sunday kind of feeling.</span>
-            <h3>Amma’s Chicken<br />Kuzhambu</h3>
-            <p>
-              A companion to the original video: a place for your shopping
-              reminders, cooking notes, and the little details you want to
-              remember.
-            </p>
-            <div class="sv-recipe-rule">
-              <span>WATCH</span><span>MAKE NOTES</span
-              ><span>COOK TOGETHER</span>
-            </div>
-            <button class="button primary" data-preview="recipe">
-              Open the kitchen companion ↗</button
-            ><a
-              class="sv-link"
-              href="https://www.youtube.com/watch?v=K-igRZ0l8rA"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Start with Amma’s original video ↗</a
-            >
-            <p class="sv-fine">
-              Companion preview. Ingredients and method await creator review.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section
-        id="everyday"
-        class="sv-life sv-section"
-        aria-labelledby="life-heading"
-      >
-        <div class="shell">
-          <div class="sv-heading">
-            <div>
-              <p class="eyebrow">04 / HERE FOR MORE THAN THE FOOD</p>
-              <h2 id="life-heading">
-                The ordinary days.<br /><em>The lovely bits.</em>
-              </h2>
-            </div>
-            <p>
-              For everyone who comes for a food video and stays for the familiar
-              company. A little corner of everyday life.
-            </p>
-          </div>
-          <div class="sv-life-grid">
-            <a
-              class="sv-life-feature"
-              href="https://www.youtube.com/watch?v=nbD8AKz1do0"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><img
-                src="./proposal/nbD8AKz1do0.jpg"
-                alt="Family Shopping Day at Lulu Mall original thumbnail"
-                width="480"
-                height="360"
-                loading="lazy"
-              />
-              <div>
-                <p class="eyebrow">EVERYDAY STORIES / 03 NOV 2026</p>
-                <h3>One shopping day.<br />A whole lot of company.</h3>
-                <span class="sv-link">Watch Family Shopping Day ↗</span>
-              </div></a
-            >
-            <article class="sv-letter">
-              <span class="sv-letter-mark" aria-hidden="true">✳</span>
-              <p class="eyebrow">A LITTLE LETTER</p>
-              <h3>Something good<br />in your inbox.</h3>
-              <p>
-                A food find, a story to revisit, and a little inspiration for
-                the weekend. The kind of email you’d actually look forward to.
-              </p>
-              <button class="sv-link" data-preview="letter">
-                Read a sample letter →
-              </button>
-              <p class="sv-fine">
-                Editorial sample · Sign-ups aren’t open yet.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section
-        id="little-finds"
-        class="sv-section shell"
-        aria-labelledby="finds-heading"
-      >
-        <div class="sv-heading">
-          <div>
-            <p class="eyebrow">05 / FOR THE “WHICH ONE IS THAT?” MOMENTS</p>
-            <h2 id="finds-heading">
-              Seen in a video.<br /><em>Worth a closer look.</em>
-            </h2>
-          </div>
-          <p>
-            The story behind a product, without the treasure hunt through the
-            comments. Details first. Decisions at your pace.
-          </p>
-        </div>
-        <article class="sv-product">
+        <figure class="portrait-stage">
           <img
-            src="./proposal/i1HTIs4IRTs.jpg"
-            alt="Dream Refrigerator original video thumbnail"
-            width="480"
-            height="360"
-            loading="lazy"
+            class="irfan-portrait"
+            src="./brand/irfans-view-channel.jpg"
+            alt="Irfan from his official YouTube channel portrait"
+            width="900"
+            height="900"
+            fetchpriority="high"
           />
-          <div>
-            <p class="eyebrow">AT HOME / PRODUCT COMPANION PREVIEW</p>
-            <h3>A big fridge.<br />An even bigger decision.</h3>
-            <p>
-              Revisit the Dream Refrigerator video, then use a practical buying
-              checklist. Model details, current prices, and supported offers
-              would be verified before launch.
-            </p>
-            <div class="sv-actions">
-              <button class="button outline" data-preview="product">
-                Take a closer look ↗</button
-              ><a
-                class="sv-link"
-                href="https://www.youtube.com/watch?v=i1HTIs4IRTs"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Watch the original ↗</a
-              >
-            </div>
-          </div>
-          <div class="sv-trust-note">
-            <span aria-hidden="true">◎</span
-            ><b>Useful before<br />it’s shoppable.</b>
-            <p>
-              Any future paid partnership would be labelled. Every offer would
-              have a real support route.
-            </p>
-          </div>
-        </article>
+          <figcaption>IRFAN’S VIEW / THE PERSON BEHIND THE BITES</figcaption>
+          <span class="portrait-sticker" aria-hidden="true"
+            >Good food.<br />Great detours.</span
+          >
+        </figure>
       </section>
       <section
-        id="together"
-        class="sv-section sv-together"
-        aria-labelledby="together-heading"
-      >
-        <div class="shell">
-          <div class="sv-heading">
-            <div>
-              <p class="eyebrow">06 / GOOD THINGS ARE BETTER SHARED</p>
-              <h2 id="together-heading">
-                Make a little room<br />for <em>your next adventure.</em>
-              </h2>
-            </div>
-            <p>
-              Small ways to make this world your own. No membership needed to
-              enjoy the good stuff.
-            </p>
-          </div>
-          <div class="sv-together-grid">
-            <article>
-              <span class="sv-number">01 / KEEP IT CLOSE</span>
-              <div class="sv-pocket-art" aria-hidden="true">
-                <span>MY LITTLE LIST</span><b>One day.<br />Maybe Sunday.</b
-                ><small>Places + stories + possibilities</small>
-              </div>
-              <h3>Your own little list.</h3>
-              <p>
-                Save the stops and stories that catch your eye. Your demo list
-                lives in this tab and clears when you reload.
-              </p>
-              <button class="sv-link" data-preview="saved">
-                Open my saved discoveries →
-              </button>
-            </article>
-            <article>
-              <span class="sv-number">02 / A SEAT AT THE TABLE</span>
-              <div class="sv-ticket" aria-hidden="true">
-                <small>THE WEEKEND TABLE</small
-                ><b>Good food.<br />New company.</b
-                ><span>A SAMPLE INVITATION</span>
-              </div>
-              <h3>Meet over a meal.</h3>
-              <p>
-                Imagine a small, carefully hosted food outing. A lovely
-                afternoon, clear details, and someone responsible for every
-                guest.
-              </p>
-              <button class="sv-link" data-preview="outing">
-                See a sample invitation →
-              </button>
-            </article>
-            <article>
-              <span class="sv-number">03 / MAYBE, IN YOUR POCKET</span>
-              <div class="sv-phone-art" aria-hidden="true">
-                <span>9:41 <b>irfan’s view</b></span
-                ><strong>Where to<br />this weekend?</strong
-                ><i>♡ My Chennai list</i><i>↗ A safari, someday</i>
-              </div>
-              <h3>A companion for the road.</h3>
-              <p>
-                A peek at how saved places and travel notes could come together
-                on your phone. Start on the web; grow with your habits.
-              </p>
-              <button class="sv-link" data-preview="app">
-                Explore the pocket preview →
-              </button>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section
-        id="playground"
         class="foodverse-intro shell"
         aria-labelledby="foodverse-heading"
       >
         <div>
-          <p class="eyebrow">07 / THE FOODVERSE PLAYGROUND</p>
+          <p class="eyebrow">Private concept · THE FOODVERSE</p>
           <h2 id="foodverse-heading">
-            A little exploring.<br /><em>A little friendly fun.</em>
+            Your next bite.<br /><em>A new adventure.</em>
           </h2>
           <p>A food map, a little curiosity, and stories worth following.</p>
           <p>
@@ -736,8 +256,9 @@
                   Follow the heads. Find your next bite.
                 </h3>
                 <p>
-                  Find a place from the food trail and follow its original
-                  video. The map loads only when you choose.
+                  Custom CSV pins with editorial sentiment and video links.
+                  Usage charges apply beyond your account's free allowance.
+                  Browsing the free map never loads this API.
                 </p>
               </div>
               <div class="map-brand-strip">
@@ -751,7 +272,7 @@
                   <strong>irfan’s view</strong
                   ><span>THE CHENNAI FOOD TRAIL</span>
                 </div>
-                <span class="brand-concept">Approval demo</span>
+                <span class="brand-concept">Private concept</span>
               </div>
               <div class="map-topline">
                 <span
@@ -825,7 +346,7 @@
               <div>
                 <strong>irfan’s view</strong><span>THE CHENNAI FOOD TRAIL</span>
               </div>
-              <span class="brand-concept">Approval demo</span>
+              <span class="brand-concept">Private concept</span>
             </div>
             <div class="restaurant-cloud" aria-label="Selected restaurant">
               <span class="cloud-kicker">YOUR NEXT BITE</span
@@ -950,12 +471,12 @@
       <section id="about" class="about-section shell">
         <span class="about-mark" aria-hidden="true">i.</span>
         <div>
-          <p class="eyebrow">A LITTLE MORE OF WHAT BRINGS US TOGETHER</p>
-          <h2>Good food is a beginning.<br /><em>Good company stays.</em></h2>
+          <p class="eyebrow">BEHIND EVERY PIN, A STORY</p>
+          <h2>Food tastes better<br />with a little <em>discovery.</em></h2>
           <p>
-            A place to return to after the video ends. For the next meal, the
-            someday trip, the familiar stories, and the little discoveries worth
-            sharing. A public collaboration demo for Irfan’s approval.
+            Irfan’s View explores food, people and places. This private concept
+            connects selected restaurant stories to a map, so your next
+            discovery can begin with a video.
           </p>
           <a
             class="text-link"
@@ -969,16 +490,10 @@
     </main>
     <footer class="site-footer shell">
       <div>
-        <strong>irfan’s view / GOOD FOOD. GOOD COMPANY.</strong>
+        <strong>irfan’s / FOOD TRAIL</strong>
         <p>
-          Public demo for Irfan’s approval · Not an official Irfan’s View
-          website.<br />Approval, brand permission and sponsorship are pending.
-        </p>
-        <p class="demo-disclaimer">
-          The repository owner does not advertise this content or use it for
-          personal purposes. All images and video thumbnails are sourced from
-          and attributed to Irfan’s View for review by Irfan, a potential
-          project sponsor. No approval, sponsorship or endorsement is claimed.
+          Private concept · Not an official Irfan’s View website.<br />Brand
+          permission and public launch approval pending.
         </p>
       </div>
       <div class="footer-links">
@@ -991,8 +506,8 @@
     <dialog id="privacy-dialog" aria-labelledby="privacy-title">
       <h2 id="privacy-title">Your visit, your choice.</h2>
       <p>
-        This public approval demo uses no analytics or location storage. Near me
-        asks your browser for coordinates and uses them in memory to sort nearby
+        This private concept uses no analytics or location storage. Near me asks
+        your browser for coordinates and uses them in memory to sort nearby
         spots. If Google Maps is loaded, centering it shares the viewport with
         Google.
       </p>
@@ -1025,16 +540,6 @@
         uploaded. Food magazine links to the original videos on YouTube.
       </p>
       <p>
-        My little list, planning checklists and kitchen notes stay in memory for
-        this tab and clear on reload. Preview letters and invitations do not
-        collect contact details, send messages, take payments or reserve places.
-        Video thumbnails are served locally for this public approval demo and
-        link to their original Irfan’s View videos. The repository owner does
-        not advertise the content or use it for personal purposes. Irfan is a
-        potential project sponsor; approval, sponsorship and endorsement remain
-        pending.
-      </p>
-      <p>
         <a
           href="https://policies.google.com/privacy"
           target="_blank"
@@ -1051,13 +556,6 @@
       </p>
       <form method="dialog"><button class="button primary">Close</button></form>
     </dialog>
-    <dialog id="showcase-dialog" aria-labelledby="showcase-dialog-title">
-      <form method="dialog">
-        <button class="sv-dialog-close" aria-label="Close preview">×</button>
-      </form>
-      <div id="showcase-dialog-body"></div>
-    </dialog>
-    <div id="save-feedback" class="sv-toast" role="status"></div>
     <noscript
       >This food trail needs JavaScript for search and maps. Visit
       <a href="https://www.youtube.com/@irfansview1">Irfan’s View on YouTube</a

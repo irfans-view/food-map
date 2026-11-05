@@ -1,4 +1,4 @@
-Third-party notices for the Irfan food map public approval demo.
+Third-party notices for the Irfan food map private concept.
 Google Maps and YouTube are external services governed by their own terms.
 
 ========================================
