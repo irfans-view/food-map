@@ -20,13 +20,27 @@ jobs:
       - name: Validate static payload
         run: |
           node --input-type=module <<'NODE'
-          import { readdirSync, readFileSync, statSync } from 'node:fs';
+          import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
           import assert from 'node:assert/strict';
           const walk = (dir) => readdirSync(dir).flatMap(name => {
             const path = dir + name;
             return statSync(path).isDirectory() ? walk(path + '/') : [path];
           });
           for (const file of ['index.html', '.nojekyll', 'data/restaurants.csv', 'THIRD_PARTY_NOTICES.txt']) readFileSync(file);
+          const html = readFileSync('index.html', 'utf8');
+          for (const text of [
+            'Demo site for Irfan’s approval',
+            'The repository owner does not advertise this content or use it for',
+            'personal purposes.',
+            'a potential project sponsor',
+            'No approval, sponsorship or endorsement is claimed.',
+          ]) assert.ok(html.includes(text), `Missing demo disclosure: ${text}`);
+          const proposalMedia = [
+            '38FqWdcclFs.jpg', 'ZGxlV0S5_9E.jpg', 'K-igRZ0l8rA.jpg',
+            'nbD8AKz1do0.jpg', 'i1HTIs4IRTs.jpg', 'Qjd0B9vRS6w.jpg',
+            'w9lFuohFbYU.jpg', 'tQPSROQLw9U.jpg',
+          ];
+          for (const file of proposalMedia) assert.ok(existsSync(`proposal/${file}`), `Missing proposal thumbnail: ${file}`);
           const js = walk('assets/').filter(p => p.endsWith('.js')).map(p => readFileSync(p, 'utf8')).join('');
           for (const name of ['JS_KEY', 'MAP_ID', 'EMBED_KEY']) assert.ok(js.includes(`FOOD_MAP_PUBLIC_${name}_PLACEHOLDER`));
           assert.ok(!/(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_|AIza[0-9A-Za-z_-]{30,})/.test(js));
@@ -61,7 +75,7 @@ jobs:
           if (!values.JS_KEY || !values.MAP_ID) throw new Error('Configure GOOGLE_MAPS_API_KEY and GOOGLE_MAPS_MAP_ID secrets.');
           for (const value of Object.values(values)) if (!/^[A-Za-z0-9_-]*$/.test(value)) throw new Error('Invalid Maps configuration.');
           mkdirSync('_site');
-          for (const path of ['index.html', '.nojekyll', 'THIRD_PARTY_NOTICES.txt', 'assets', 'brand', 'data']) cpSync(path, '_site/' + path, { recursive: true });
+          for (const path of ['index.html', '.nojekyll', 'THIRD_PARTY_NOTICES.txt', 'assets', 'brand', 'data', 'proposal']) cpSync(path, '_site/' + path, { recursive: true });
           for (const file of readdirSync('_site/assets').filter(p => p.endsWith('.js'))) {
             const path = '_site/assets/' + file;
             let text = readFileSync(path, 'utf8');
