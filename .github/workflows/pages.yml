@@ -26,7 +26,7 @@ jobs:
             const path = dir + name;
             return statSync(path).isDirectory() ? walk(path + '/') : [path];
           });
-          for (const file of ['index.html', '.nojekyll', 'data/restaurants.csv', 'THIRD_PARTY_NOTICES.txt']) readFileSync(file);
+          for (const file of ['index.html', '.nojekyll', 'data/manifest.json', 'data/restaurants.csv', 'data/travel.csv', 'THIRD_PARTY_NOTICES.txt']) readFileSync(file);
           const html = readFileSync('index.html', 'utf8');
           const normalizedHtml = html.replace(/\s+/g, ' ');
           for (const text of [
