@@ -1,0 +1,23 @@
+{
+  "tabs": [
+    { "id": "map", "label": "Food map", "locations": "restaurants.csv" },
+    {
+      "id": "status",
+      "label": "Still open? Let’s check",
+      "locations": "restaurants.csv"
+    },
+    {
+      "id": "roulette",
+      "label": "Food roulette",
+      "locations": "restaurants.csv"
+    },
+    { "id": "hunt", "label": "Mystery hunt", "locations": "restaurants.csv" },
+    { "id": "magazine", "label": "Food magazine", "videos": "videos.json" },
+    {
+      "id": "price",
+      "label": "Guess the price",
+      "locations": "restaurants.csv"
+    },
+    { "id": "travel", "label": "Travel notebook", "places": "travel.csv" }
+  ]
+}
